@@ -1,0 +1,139 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf5;
+  color: #333;
+}
+
+h2,
+h3 {
+  color: #ff8866;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+h1 {
+  font-size: 40px;
+  color: #ff8866;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 20px;
+}
+
+header {
+  background-color: #fff3e6;
+  padding: 20px;
+  border-bottom: 2px solid #ffe0cc;
+  box-shadow: 0 2px 5px #0000000d;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin-top: 15px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  justify-content: center;
+  color: #444;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #ffccaa;
+  color: #000;
+}
+
+.buttons {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.book-now {
+  background-color: #ff9966;
+  color: #ffffff;
+  border: none;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-now:hover {
+  background-color: #ff7f50;
+  color: rgb(252, 234, 234);
+}
+
+
+section {
+  padding: 30px 20px;
+  border-bottom: 1px solid #ffe0cc;
+  justify-content: center;
+}
+
+ul {
+  margin-left: 40px;
+  list-style-type: disc;
+
+}
+
+#menu ul  {
+  list-style-type: disc;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+a[href^="mailto:"] {
+  color: #ff6644;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#bookingForm input {
+  width: 250px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ffd2b3;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#bookingForm button {
+  margin-top: 10px;
+}
+
+#bookingList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#bookingList li {
+  background-color: #fff3e6;
+  border: 1px solid #ffd2b3;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}

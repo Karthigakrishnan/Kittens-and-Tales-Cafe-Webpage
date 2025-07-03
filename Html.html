@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kittens and Tales Cafe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kittens and Tales Cafe</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#Books">Books</a></li>
+          <li><a href="#cats">Cats</a></li>
+          <li><a href="#user">Bookings</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Kittens and Tales Cafe, where every cup of coffee comes
+          with a side of purrs!
+        </p>
+      </section>
+
+      <section class="buttons">
+        <h2>Reserve a spot at Kittens and Tales Cafe</h2>
+        <button class="book-now">Book Now</button>
+        <div id="bookingForm" style="display: none; margin-top: 20px">
+          <form id="form">
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              required
+            /><br /><br />
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email"
+              required
+            /><br /><br />
+            <input type="date" id="date" required /><br /><br />
+            <input
+              type="number"
+              id="guests"
+              placeholder="Number of Guests"
+              required
+            /><br /><br />
+            <input
+              type="text"
+              id="preferredCats"
+              placeholder="Preferred Cats"
+            /><br /><br />
+            <button type="submit" class="book-now">Submit Booking</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="menu">
+        <h2>Menu</h2>
+        <div class="center">
+          <div class="menu-category">
+            <h3>Coffee</h3>
+            <ul>
+              <li>Espresso</li>
+              <li>Latte</li>
+              <li>Cappuccino</li>
+              <li>Americano</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <h3>Teas</h3>
+            <ul>
+              <li>Green Tea</li>
+              <li>Black Tea</li>
+              <li>Herbal Tea</li>
+              <li>Chai Tea</li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <h3>Pastries</h3>
+            <ul>
+              <li>Croissant</li>
+              <li>Muffin</li>
+              <li>Cookie</li>
+              <li>Brownie</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="Books">
+        <h2>Books & Reading Nooks</h2>
+        <p>
+          Grab a cozy book while sipping your coffee. We offer a curated
+          selection of fiction, poetry, and cat tales!
+        </p>
+      </section>
+
+      <section id="cats">
+        <h2>Meet Our Cats</h2>
+        <p>We have a variety of adorable cats waiting to meet you!</p>
+        <div class="center">
+          <ul>
+            <li>British Shorthair</li>
+            <li>Calico</li>
+            <li>Persian</li>
+            <li>Siamese</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="user">
+        <section id="user">
+          <h2>Your Bookings</h2>
+          <ul id="bookingList"></ul>
+        </section>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          For inquiries, please email us at
+          <a href="mailto:kitties@gmail.com">kitties@gmail.com</a>
+        </p>
+      </section>
+    </main>
+    <script>
+      const bookBtn = document.querySelector(".book-now");
+      const bookingForm = document.getElementById("bookingForm");
+      const form = document.getElementById("form");
+      const bookingList = document.getElementById("bookingList");
+
+      bookBtn.addEventListener("click", () => {
+        bookingForm.style.display = "block";
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const date = document.getElementById("date").value;
+        const guests = document.getElementById("guests").value;
+        const preferredCats = document.getElementById("preferredCats").value;
+
+        const bookingItem = document.createElement("li");
+        bookingItem.innerHTML = `<strong>${name}</strong> (${email})<br>
+      Date: ${date}<br>
+      Guests: ${guests}<br>
+      Preferred Cats: ${preferredCats}<br><hr>`;
+
+        bookingList.appendChild(bookingItem);
+
+        form.reset(); 
+        bookingForm.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
